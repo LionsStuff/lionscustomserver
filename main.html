@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Servers | LionsStuff</title>
+	<style type="text/css">
+		body,html{
+	font-family: "Roboto";
+	height: 100%;
+    margin: 0;
+    font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+h1{
+	font-size: 100px;
+	font-style: bold;
+}
+
+h2{
+	font-size: 30px;
+	font-style: bold;
+}
+
+
+.Great{ 
+	text-align: center;
+}
+
+.bg-image{
+	background-image: url("Aether.png");
+	filter: blur(6px);
+	-webkit-filter: blur(6px);
+	height: 320%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+	
+#MAIN{
+	background-color: rgba(255, 255, 255, 0.9);
+	color: black;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 160%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+	z-index: 2; /*Manda imagen al frente */
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+}
+
+#divleft{
+	float: left;
+}
+
+#divright2{
+	float: right;
+}
+
+#Boton{
+	background-color: lightblue;
+	border: none;
+	width: 250px;
+	height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	transition: 0.45s;
+}
+
+#Boton:hover{
+	background-color: LightSkyBlue;
+	cursor: pointer;
+}
+
+/* Second */
+
+#divfull{
+	float: left;
+	width: 50%;
+	padding: 50px;
+}
+
+#divupd{
+	float: right;
+	width: 50%;
+	padding: 50px
+}
+
+.Download{
+	background-color: lightblue;
+	border: none;
+	width: 250px;
+	height: 75px;
+	font-size: 30px;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+.Download:hover{
+	background-color: LightSkyBlue;
+	cursor: pointer;
+}
+
+h3{
+	font-size: 30px;
+	font-style: bold;
+}
+
+.Intro{
+	font-size: 30px;
+}
+
+.NoCenter{
+	text-align: left;
+}
+
+.Title{
+	font-size: 30px;
+}
+
+.Quiz{
+	font-size: 20px;
+}
+
+
+	</style>
+	<script type="text/javascript">
+		function Puntos() {
+  var txt;
+  var precio = prompt("Pon la suma de puntos para calcular el precio: ", "0");
+  if (precio == null || precio == "") {
+    txt = "No hay datos";
+  } else {
+  	var num1 = parseInt(precio);
+  	var basenumero = (num1+0.5) * 86;
+  	var mensual = basenumero * 0.065;
+  	var basenumero = basenumero.toFixed(0)
+  	var mensual = mensual.toFixed(0)
+    txt = "Solo u pago de = $" + basenumero;
+    txt2 = "O Mensualmente = $" + mensual;
+    txt3 = "O tambien por Año (10% menos que mensualmente) = $" + (mensual*11);
+    txt4 = "Precio Comun (En el internet) = $" + (mensual*12);
+  }
+  document.getElementById("demo").innerHTML = txt;
+  document.getElementById("demo2").innerHTML = txt2;
+  document.getElementById("demo3").innerHTML = txt3;
+}
+	</script>
+</head>
+<body>
+	<div class="bg-image"></div>
+
+	<div id="MAIN">
+
+
+	<h1 class="Great">Servers</h1>
+	<h2 class="Great">Servers para Minecraft :P</h2>
+	<br><br><br>
+		<p class="Intro">Esta página va a calcular cuando costaría un server conmigo</p>
+		<p class="Intro">Para calcular cuanto costaría, añade los puntos que te de y al final anotalos en el cuadro para calcular el precio.</p>
+		<p class="Intro">Los precios pueden ser hasta <font color="red">7 veces</font> más barato</p>
+
+	<br><br>
+
+	<ol class="NoCenter Title">
+		<li>Jugadores</li>
+		<br>
+		<ul class="NoCenter Quiz">
+		<li>5 Jugadores - <font color="green">0 puntos</font></li>
+		<li>10 Jugadores - <font color="green">1 puntos</font></li>
+		<li>20 + 5 Jugadores - <font color="green">2 puntos</font></li>
+		<li>30 + 5 Jugadores - <font color="green">3 puntos</font></li>
+		<li>40 + 10 Jugadores - <font color="green">5 puntos</font></li>
+		</ul>
+
+		<br>
+		<li>Tiempo (Mayor gasto)</li>
+		<br>
+		<ul class="NoCenter Quiz">
+		<li>Pedir a que hora abrirlo - <font color="green">0 puntos</font></li>
+		<li>Personalizado (Menos de 10 horas) - <font color="green">2 punto</font></li>
+		<li>Personalizado en dias de clase y 24 horas en fin de semana - <font color="green">10 puntos</font></li>
+		<li>24/7 (Principal gasto = Electricidad) - <font color="green">30 puntos</font></li>
+		</ul>
+
+		<br>
+		<li>Mods</li>
+		<br>
+		<ul class="NoCenter Quiz">
+		<li>Vanilla (Sin mods) - <font color="green">0 puntos</font></li>
+		<li>5 mods o menos - <font color="green">0 puntos</font></li>
+		<li>6 a 15 mods- <font color="green">1 punto</font></li>
+		<li>16 a 30 mods - <font color="green">2 puntos</font></li>
+		<li>31 a 60 mods - <font color="green">10 puntos</font></li>
+		<li>61 a 100 mods - <font color="green">20 puntos</font></li>
+		</ul>
+
+		<br>
+		<li>Mantenimiento</li>
+		<br>
+		<ul class="NoCenter Quiz">
+		<li>Sin mantenimiento - <font color="green">0 puntos</font></li>
+		<li>Con mantenimiento - <font color="green">0 puntos</font></li>
+		<li><font color="red">El mantenimiento esta incluido sin costo extra</font></li>
+		</ul>
+
+		<br>
+		<li>Tipo de Server</li>
+		<br>
+		<ul class="NoCenter Quiz">
+		<li>Integrado y sencillo - <font color="green">0 puntos</font></li>
+		<li><font color="blue">POTENTE </font> <font color="red">(No se suman los puntos anteriores y no esta disponible el pago mensual) </font>- <font color="green">250 puntos</font></li>
+		</ul>
+	</ol>
+	<br>
+	
+	<input type="button" value="Obtener precio" onclick="Puntos()" id="Boton">
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<br>
+
+	<a href="https://clients.mcprohosting.com/cart.php?gid=34"><p class="Intro">Server más barato que pude encontrar</p></a>
+
+	</div>
+</body>
+</html>
